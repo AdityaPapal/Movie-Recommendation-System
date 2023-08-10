@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Movie Recommender System</title>
+    <style>
+        /* Add your CSS styles here */
+    </style>
+</head>
+<body>
+    <h1>Movie Recommender System</h1>
+    
+    <form action="/" method="post">
+        <label for="movie-select">Select a movie:</label>
+        <select name="movie" id="movie-select">
+            {% for movie in movies_list %}
+                <option value="{{ movie }}">{{ movie }}</option>
+            {% endfor %}
+        </select>
+        <button type="submit">Show Recommendations</button>
+        <div class="wrapper" >
+            <div class="card" id="image1">
+                <div class="card__overlay"></div>
+                <div class="card__content">
+                    <span class="card__title">{{final_result}}</span><br>
+                    <span>{{final_result2}}</span>
+                </div>
+                <span class="card__number"></span>
+            </div>
+        </div>
+        
+        <div class="wrapper" >
+            <div class="card" id="image2"> <!-- Changed id to image2 -->
+                <div class="card__overlay"></div>
+                <div class="card__content">
+                    <span class="card__title">{{final_result3}}</span><br>
+                    <span>{{final_result4}}</span>
+                </div>
+                <span class="card__number"></span>
+            </div>
+        </div>
+        
+        <div class="wrapper" >
+            <div class="card" id="image3"> <!-- Changed id to image3 -->
+                <div class="card__overlay"></div>
+                <div class="card__content">
+                    <span class="card__title">{{final_result5}}</span><br>
+                </div>
+                <span class="card__number"></span>
+            </div>
+        </div>
+    </form>
+    
+    <!-- Recommended movies display -->
+    
+</body>
+</html>
